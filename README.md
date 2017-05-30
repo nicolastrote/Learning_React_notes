@@ -40,7 +40,46 @@ To remove a dependency:
 
 To install all dependencies:
 <code>yarn install</code> or <code>yarn</code> 
-
->An optional alternative for npm is Yarn
+An optional alternative for npm is Yarn
 
 ## CHAPTER 2 - Emerging JavaScript
+### JavaScript
+* Node.js et JavaScript donnent full-stack applications
+* ECMA committee=> last update has many names: ECMAScript 6, ES6, ES2015, and ES6Harmony, Next is ES2017.
+* Latest JavaScript features : http://kangax.github.io/compat-table/esnext/
+### Declaring Variables in ES6
+* VAR : var pizza = true  [retour] pizza=false;
+* CONST : Connot be reset : const pizza = true [retour] pizza=false;  //Uncaught type error
+* LET : lexical variable scoping
+<code> var topic = "JavaScript"
+if (topic) {
+let topic = "React"
+console.log('block', topic) // React
+}
+console.log('global', topic) // JavaScript
+</code>
+Another area where curly braces don’t block off a variable’s scope is in for loops:
+<code> var div,
+ container = document.getElementById('container')
+ for (var i=0; i<5; i++) {
+   div = document.createElement('div')
+   div.onclick = function() {
+     alert('This is box #' + i)
+   }
+ container.appendChild(div)
+ }
+</code>
+La solution : 
+<code>
+var div, container = document.getElementById('container')
+for (let i=0; i<5; i++) {
+div = document.createElement('div')
+div.onclick = function() {
+alert('This is box #: ' + i)
+}
+container.appendChild(div)
+}
+</code>
+* Template Strings
+
+
