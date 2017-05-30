@@ -88,5 +88,12 @@ for (let i=0; i<5; i++) {
 }
 ```
 * Template Strings
-
-
+** console.log(lastName + ", " + firstName + " " + middleName)
+** insert the variable values: console.log(`${lastName}, ${firstName} ${middleName}`)
+### Default Parameters
+* Languages including C++ and Python allow developers to declare default values for function arguments
+```javascript
+function logActivity(name="Shane McConkey", activity="skiing") {
+console.log( `${name} loves ${activity}` )
+}
+```
