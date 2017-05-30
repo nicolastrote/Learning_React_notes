@@ -20,26 +20,26 @@ https://jsbin.com (online code editor similar to CodePen and JSFiddle)
 ### NODE.JS
 https://nodejs.org/en/download/ : for npm tool
 
-<code>$ node -v
-Output: v7.3.0</code>
+```$ node -v
+Output: v7.3.0```
 ### YARN
 * It was released in 2016 by Facebook, Google, and Tilde. 
 * manage their dependencies more reliably
 * installing their packages
 * much faster than npm
 
-<code>npm install -g yarn</code>
+```npm install -g yarn```
 Instead of using 
 
-<code>npm install --save [package-name]</code> 
+```npm install --save [package-name]```
 you will use
-<code>yarn add [package-name]</code>
+```yarn add [package-name]```
 
 To remove a dependency:
-<code>yarn remove [package-name]</code>
+```yarn remove [package-name]```
 
 To install all dependencies:
-<code>yarn install</code> or <code>yarn</code> 
+```yarn install``` or ```yarn``` 
 An optional alternative for npm is Yarn
 
 ## CHAPTER 2 - Emerging JavaScript
@@ -51,15 +51,15 @@ An optional alternative for npm is Yarn
 * VAR : var pizza = true  [retour] pizza=false;
 * CONST : Connot be reset : const pizza = true [retour] pizza=false;  //Uncaught type error
 * LET : lexical variable scoping
-<code> var topic = "JavaScript"
+``` var topic = "JavaScript"
 if (topic) {
 let topic = "React"
 console.log('block', topic) // React
 }
 console.log('global', topic) // JavaScript
-</code>
+```
 Another area where curly braces don’t block off a variable’s scope is in for loops:
-<code> var div,
+``` var div,
  container = document.getElementById('container')
  for (var i=0; i<5; i++) {
    div = document.createElement('div')
@@ -68,10 +68,9 @@ Another area where curly braces don’t block off a variable’s scope is in for
    }
  container.appendChild(div)
  }
-</code>
+```
 La solution : 
-<code>
-var div, container = document.getElementById('container')
+``` var div, container = document.getElementById('container')
 for (let i=0; i<5; i++) {
 div = document.createElement('div')
 div.onclick = function() {
@@ -79,7 +78,7 @@ alert('This is box #: ' + i)
 }
 container.appendChild(div)
 }
-</code>
+```
 * Template Strings
 
 
