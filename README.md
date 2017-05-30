@@ -20,28 +20,33 @@ https://jsbin.com (online code editor similar to CodePen and JSFiddle)
 ### NODE.JS
 https://nodejs.org/en/download/ : for npm tool
 
-```$ node -v
-Output: v7.3.0```
+```
+$ node -v
+Output: v7.3.0
+```
 ### YARN
 * It was released in 2016 by Facebook, Google, and Tilde. 
 * manage their dependencies more reliably
 * installing their packages
 * much faster than npm
-
-```npm install -g yarn```
+```
+npm install -g yarn
+```
 Instead of using 
-
-```npm install --save [package-name]```
+```
+npm install --save [package-name]
+```
 you will use
-```yarn add [package-name]```
-
+```
+yarn add [package-name]
+```
 To remove a dependency:
-```yarn remove [package-name]```
-
+```
+yarn remove [package-name]
+```
 To install all dependencies:
-```yarn install``` or ```yarn``` 
+`yarn install` or `yarn`
 An optional alternative for npm is Yarn
-
 ## CHAPTER 2 - Emerging JavaScript
 ### JavaScript
 * Node.js et JavaScript donnent full-stack applications
@@ -51,7 +56,8 @@ An optional alternative for npm is Yarn
 * VAR : var pizza = true  [retour] pizza=false;
 * CONST : Connot be reset : const pizza = true [retour] pizza=false;  //Uncaught type error
 * LET : lexical variable scoping
-``` var topic = "JavaScript"
+```javascript 
+var topic = "JavaScript"
 if (topic) {
 let topic = "React"
 console.log('block', topic) // React
@@ -59,7 +65,8 @@ console.log('block', topic) // React
 console.log('global', topic) // JavaScript
 ```
 Another area where curly braces don’t block off a variable’s scope is in for loops:
-``` var div,
+```javascript  
+var div,
  container = document.getElementById('container')
  for (var i=0; i<5; i++) {
    div = document.createElement('div')
@@ -70,7 +77,8 @@ Another area where curly braces don’t block off a variable’s scope is in for
  }
 ```
 La solution : 
-``` var div, container = document.getElementById('container')
+```javascript
+var div, container = document.getElementById('container')
 for (let i=0; i<5; i++) {
 div = document.createElement('div')
 div.onclick = function() {
