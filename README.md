@@ -175,7 +175,7 @@ console.log('speed:', mph)
 }
 ```
 ### The Spread Operator
-The spread operator is three dots (...) for
+_The spread operator is three dots (...) for_
 * combine array
 ``` var first = ["a", "b", "c"]
 var last = ["d", "e"]
@@ -191,6 +191,40 @@ var alphabet = ["a", "b", "c", "d"]
 var [first, ...apart] = alphabet
 console.log(apart.join(", ")) // "a, b, c"
 ```
+* Spreading operator to collect function arguments as an array
+```
+function directions(...args) {
+var [start, ...remaining] = args
+var [finish, ...stops] = remaining.reverse()
+console.log(`drive through ${args.length} towns`)
+console.log(`start in ${start}`)
+console.log(`the destination is ${finish}`)
+console.log(`stopping ${stops.length} times in between`)
+}
+directions(
+"Truckee",
+"Tahoe City",
+"Sunnyside",
+"Homewood",
+"Tahoma"
+)
+```
+* Spreading operator to collect objets arguments as an array
+```
+var morning = {
+breakfast: "oatmeal",
+lunch: "peanut butter and jelly"
+}
+var dinner = "mac and cheese"
+var backpackingMeals = {
+...morning,
+dinner
+}
+console.log(backpackingMeals) // {breakfast: "oatmeal",
+lunch: "peanut butter and jelly",
+dinner: "mac and cheese"}
+```
+
 
 
 
