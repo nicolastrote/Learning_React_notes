@@ -101,7 +101,8 @@ console.log( `${name} loves ${activity}` )
 * ```var lordify = firstname => `${firstname} of Canterbury` ```
 * ```var lordify = (firstName, land) => `${firstName} of ${land}` ```
 ### Transpiling ES6
-
+For compatibility with all browser ES6 code is convert to ES5 with Babel.
+You just include the browser.js file, and any scripts with type="text/babel".
 
 
 
