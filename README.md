@@ -255,13 +255,13 @@ new Error("cannot load members from randomuser.me"))
 * subclass inherit properties and methods
 ```
 class Vacation {
-constructor(destination, length) {
-this.destination = destination
-this.length = length
-}
-print() {
-console.log(`${this.destination} will take ${this.length} days.`)
-}
+  constructor(destination, length) {
+    this.destination = destination
+    this.length = length
+  }
+  print() {
+    console.log(`${this.destination} will take ${this.length} days.`)
+  }
 }
 ```
 Use
@@ -281,6 +281,13 @@ class Expedition extends Vacation {
     console.log(`Bring your ${this.gear.join(" and your ")}`)
   }
 }
+```
+Use of extended:
+```
+const trip = new Expedition("Mt. Whitney", 3,["sunglasses", "prayer flags", "camera"])
+trip.print()
+// Mt. Whitney will take 3 days.
+// Bring your sunglasses and your prayer flags and your camera
 ```
 
 
