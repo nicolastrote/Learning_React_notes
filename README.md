@@ -145,8 +145,8 @@ var funHike = {name,elevation,print}
 funHike.print() // Mt. Tallac is 9738 feet tall 
 ```
 * Object literal enhancement allows us to pull global variables into objects and reduces typing by making the function keyword unnecessary.
+* OLD
 ```
-// OLD
 var skier = {
 name: name,
 sound: sound,
@@ -158,8 +158,9 @@ speed: function(mph) {
 this.speed = mph
 console.log('speed:', mph)
 }
-}
-// NEW
+} ```
+* NEW
+```
 const skier = {
 name,
 sound,
@@ -173,6 +174,26 @@ console.log('speed:', mph)
 }
 }
 ```
+### The Spread Operator
+The spread operator is three dots (...) for
+* combine array
+``` var first = ["a", "b", "c"]
+var last = ["d", "e"]
+var alphabet = [...first, ...last]
+console.log(alphabet.join(', ')) // a,b,c,d,e,f
+var [reversing] = peaks.reverse()  // can be write: var [reversing] = [...alphabet].reverse()
+console.log(reversing) // f
+console.log(peaks.join(', ')) //f,e,d,c,b,a
+```
+* A part of array
+```
+var alphabet = ["a", "b", "c", "d"]
+var [first, ...apart] = alphabet
+console.log(apart.join(", ")) // "a, b, c"
+```
+
+
+
 
 
 
