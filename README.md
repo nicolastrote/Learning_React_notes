@@ -101,8 +101,39 @@ console.log( `${name} loves ${activity}` )
 * ```var lordify = firstname => `${firstname} of Canterbury` ```
 * ```var lordify = (firstName, land) => `${firstName} of ${land}` ```
 ### Transpiling ES6
-For compatibility with all browser ES6 code is convert to ES5 with Babel.
-You just include the browser.js file, and any scripts with type="text/babel".
+* For compatibility with all browser ES6 code is convert to ES5 with Babel.
+* You just include the browser.js file, and any scripts with type="text/babel".
+### ES6 Objects and Arrays
+#### Destructuring Assignement
+* destructure incoming function arguments:
+``` var sandwich = {
+bread: "dutch crunch",
+meat: "tuna",
+cheese: "swiss",
+toppings: ["lettuce", "tomato", "mustard"]
+}
+var {bread, meat} = sandwich
+console.log(bread, meat) // dutch crunch tuna ```
+* destructured from arrays:
+``` var [,,thirdResort] = ["Kirkwood", "Squaw", "Alpine"] 
+console.log(thirdResort) // Alpine ```
+``` var [firstResort] = ["Kirkwood", "Squaw", "Alpine"]
+console.log(firstResort) // Kirkwood ```
+### Object Literal Enhancement
+* Object literal enhancement is the opposite of destructuring
+``` var name = "Tallac"
+var elevation = 9738
+var funHike = {name,elevation}
+console.log(funHike) // {name: "Tallac", elevation: 9738} ``` 
+* We can also create object methods with object literal enhancement or restructuring
+``` var name = "Tallac"
+var elevation = 9738
+20 | Chapter 2: Emerging JavaScript
+var print = function() {
+console.log(`Mt. ${this.name} is ${this.elevation} feet tall`)
+}
+var funHike = {name,elevation,print}
+funHike.print() // Mt. Tallac is 9738 feet tall ```
 
 
 
