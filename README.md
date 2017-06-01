@@ -158,7 +158,8 @@ speed: function(mph) {
 this.speed = mph
 console.log('speed:', mph)
 }
-} ```
+} 
+```
 * NEW
 ```
 const skier = {
