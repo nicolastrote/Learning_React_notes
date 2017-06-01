@@ -97,3 +97,9 @@ function logActivity(name="Shane McConkey", activity="skiing") {
 console.log( `${name} loves ${activity}` )
 }
 ```
+### Arrow Functions
+``` var lordify = firstname => `${firstname} of Canterbury`
+``` var lordify = (firstName, land) => `${firstName} of ${land}`
+
+
+
