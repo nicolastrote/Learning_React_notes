@@ -144,6 +144,35 @@ console.log(`Mt. ${this.name} is ${this.elevation} feet tall`)
 var funHike = {name,elevation,print}
 funHike.print() // Mt. Tallac is 9738 feet tall 
 ```
+* Object literal enhancement allows us to pull global variables into objects and reduces typing by making the function keyword unnecessary.
+```
+// OLD
+var skier = {
+name: name,
+sound: sound,
+powderYell: function() {
+var yell = this.sound.toUpperCase()
+console.log(`${yell} ${yell} ${yell}!!!`)
+},
+speed: function(mph) {
+this.speed = mph
+console.log('speed:', mph)
+}
+}
+// NEW
+const skier = {
+name,
+sound,
+powderYell() {
+_let_ yell = this.sound.toUpperCase()
+console.log(`${yell} ${yell} ${yell}!!!`)
+},
+speed(mph) {
+this.speed = mph
+console.log('speed:', mph)
+}
+}
+```
 
 
 
