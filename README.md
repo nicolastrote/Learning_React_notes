@@ -228,6 +228,62 @@ dinner: "mac and cheese"}
 ### Promises
 Promises give us a way to make sense out of asynchronous behavior.  
 Exemple: create an asynchronous promise for loading data from the randomuser.me API
+```
+const getFakeMembers = count => new Promise((resolves, rejects) => {
+const api = `https://api.randomuser.me/?nat=US&results=${count}`
+const request = new XMLHttpRequest()
+request.open('GET', api)
+request.onload = () =>
+(request.status === 200) ?
+resolves(JSON.parse(request.response).results) :
+reject(Error(request.statusText))
+request.onerror = (err) => rejects(err)
+request.send()
+})
+```
+Appel de la fonction:
+```
+getFakeMembers(5).then(
+members => console.log(members),
+err => console.error(
+new Error("cannot load members from randomuser.me"))
+)
+```
+### Classes
+* can create as many new vacation instances as wanted
+* class can be extended
+* subclass inherit properties and methods
+```
+class Vacation {
+constructor(destination, length) {
+this.destination = destination
+this.length = length
+}
+print() {
+console.log(`${this.destination} will take ${this.length} days.`)
+}
+}
+```
+Use
+```
+const trip = new Vacation("Santiago, Chile", 7);
+console.log(trip.print()); // Chile will take 7 days.
+```
+Extend of Vacation example:
+```
+class Expedition extends Vacation {
+  constructor(destination, length, gear) {
+    super(destination, length)
+    this.gear = gear
+  }
+  print() {
+    super.print()
+    console.log(`Bring your ${this.gear.join(" and your ")}`)
+  }
+}
+```
+
+
 
 
 
