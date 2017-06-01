@@ -106,34 +106,44 @@ console.log( `${name} loves ${activity}` )
 ### ES6 Objects and Arrays
 #### Destructuring Assignement
 * destructure incoming function arguments:
-``` var sandwich = {
+``` 
+var sandwich = {
 bread: "dutch crunch",
 meat: "tuna",
 cheese: "swiss",
 toppings: ["lettuce", "tomato", "mustard"]
 }
 var {bread, meat} = sandwich
-console.log(bread, meat) // dutch crunch tuna ```
+console.log(bread, meat) // dutch crunch tuna 
+```
 * destructured from arrays:
-``` var [,,thirdResort] = ["Kirkwood", "Squaw", "Alpine"] 
-console.log(thirdResort) // Alpine ```
-``` var [firstResort] = ["Kirkwood", "Squaw", "Alpine"]
-console.log(firstResort) // Kirkwood ```
+``` 
+var [,,thirdResort] = ["Kirkwood", "Squaw", "Alpine"] 
+console.log(thirdResort) // Alpine 
+```
+``` 
+var [firstResort] = ["Kirkwood", "Squaw", "Alpine"]
+console.log(firstResort) // Kirkwood 
+```
 ### Object Literal Enhancement
 * Object literal enhancement is the opposite of destructuring
-``` var name = "Tallac"
+``` 
+var name = "Tallac"
 var elevation = 9738
 var funHike = {name,elevation}
-console.log(funHike) // {name: "Tallac", elevation: 9738} ``` 
+console.log(funHike) // {name: "Tallac", elevation: 9738} 
+``` 
 * We can also create object methods with object literal enhancement or restructuring
-``` var name = "Tallac"
+``` 
+var name = "Tallac"
 var elevation = 9738
 20 | Chapter 2: Emerging JavaScript
 var print = function() {
 console.log(`Mt. ${this.name} is ${this.elevation} feet tall`)
 }
 var funHike = {name,elevation,print}
-funHike.print() // Mt. Tallac is 9738 feet tall ```
+funHike.print() // Mt. Tallac is 9738 feet tall 
+```
 
 
 
