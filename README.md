@@ -98,8 +98,10 @@ console.log( `${name} loves ${activity}` )
 }
 ```
 ### Arrow Functions
-```var lordify = firstname => `${firstname} of Canterbury````
-```var lordify = (firstName, land) => `${firstName} of ${land}````
+```var lordify = firstname => `${firstname} of Canterbury` ```
+```var lordify = (firstName, land) => `${firstName} of ${land}` ```
+### Transpiling ES6
+
 
 
 
