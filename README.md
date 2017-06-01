@@ -225,6 +225,9 @@ console.log(backpackingMeals) // {breakfast: "oatmeal",
 lunch: "peanut butter and jelly",
 dinner: "mac and cheese"}
 ```
+### Promises
+Promises give us a way to make sense out of asynchronous behavior.  
+Exemple: create an asynchronous promise for loading data from the randomuser.me API
 
 
 
