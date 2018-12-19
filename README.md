@@ -1,4 +1,4 @@
-# Learning_React_notes
+# Learning-React-Redux-notes
 Notes during my reading of :
   Learning React
   Functional Web Development
